@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica bloque 3</title>
+    <!-- Enlazar con hoja de estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Título de la página -->
+    <h1>Práctica bloque 3</h1>
+
+    <!-- Formulario con campos para nombre y apellidos -->
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="apellido1">Apellido 1:</label>
+        <input type="text" id="apellido1" name="apellido1"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Script para el evento -->
+    <script>
+        // Seleccionamos el campo de Apellido 1
+        const apellido1 = document.getElementById('apellido1');
+
+        // Añadimos el evento 'input' para cuando el usuario modifique el campo
+        apellido1.addEventListener('input', function() {
+            const nombre = document.getElementById('nombre').value;
+            // Usamos alert para mostrar el mensaje de bienvenida
+            alert(`Bienvenido ${nombre} ${apellido1.value}`);
+        });
+    </script>
+</body>
+</html>
